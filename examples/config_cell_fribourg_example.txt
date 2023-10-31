@@ -1,0 +1,26 @@
+# Configuration
+
+product = 'landsat_ot_c2_l2'
+measurements = ['QA_PIXEL', 'green', 'red', 'nir']
+# to make your live easier you can manually replace the measurements variable by 
+# one of their alias:
+# QA_PIXEL: pq, pixel_quality
+# SR_B3: band_3, green
+# SR_B4: band_4, red
+# SR_B5: band_5, nir
+
+longitude = (7.13, 7.23)
+latitude = (46.76, 46.81)
+crs = 'epsg:4326'
+
+time = ('2013-03-22', '2023-08-22')
+# the following date formats are also valid:
+# time = ('2000-01-01', '2001-12-31')
+# time=('2000-01', '2001-12')
+# time=('2000', '2001')
+
+# Below is the most appropiate UTM zone according to the DataCube System.
+# We prefer not to use this, instead specifying SwissGrid (epsg:2056).
+#output_crs = 'epsg:32632'
+output_crs = 'epsg:2056'
+resolution = -30.0, 30.0
